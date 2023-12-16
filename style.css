@@ -1,0 +1,23 @@
+.parent{
+    background-color: black;
+    height: 500px;
+    width: 900px;
+    display: flex;
+}
+
+.item{
+    width: 100%;
+    height: 300px;
+    background-color: orange;
+}
+.item2{
+    width: 100%;
+    flex: 2;
+    height: 300px;
+    background-color: green;
+}
+.item3{
+    width: 100%;
+    height: 300px;
+    background-color: violet;
+}

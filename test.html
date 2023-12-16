@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .dill{
+            height: 200px;
+            width: 200px;
+            background-color: crimson;
+            margin:250px;
+            position: relative;
+            transform: rotate(45deg);
+            animation: heartBeat 1s infinite;
+            
+        }
+        .dill::before,.dill::after{
+            content:"";
+            background-color: inherit;
+            height: 200px;
+            width: 200px;
+            position: absolute;
+            border-radius: 50%;
+        }
+        .dill::after{
+            top: 0;
+            left: -100px;
+        }
+        .dill::before{
+            top: -100px;
+            right: 0;
+        }
+
+        @keyframes heartBeat{
+            0%{
+                transform: rotate(45deg) scale(1);
+            }
+            50%{
+                transform: rotate(45deg) scale(1.2);
+            }
+            100%{
+                transform: rotate(45deg) scale(1);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="dill"></div>
+</body>
+</html>
